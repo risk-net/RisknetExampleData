@@ -1,23 +1,21 @@
-# RiskNet 示例数据
+# RiskNet Example Data
 
-此文件夹包含 RiskNet 的示例数据，数据经过处理后包括以下内容：
 
-- **对齐的 JSON 数据**：截取了前 1000 条报告。
-- **分类标签**：每条数据都包含一个分类标签，用于分类任务。
-- **`eventid` 字段**：标识事件，并对应另一个文件以获取详细的事件信息。
+## Multi-dimensional-Classification_results.json
 
-## 数据描述
+### File Introduction
 
-### 示例数据文件
+This file contains **auto-labeled risk classification results** inferred by the fine-tuned `Qwen3-32B SFT` model.
 
-- **文件名**：`aligned_data_sample.json`
-- **数据条目数**：1000
-- **字段描述**：
-  - `eventid`：事件的唯一标识符，用于链接到另一个文件中的详细事件信息。
-  - `category`：分类标签，指示报告的分类。
-  - `URL`：报告的链接。
-  - 其他字段：来自原始 JSON 数据的附加字段。
+Each record matches one original AI risk event through the unique `event_id`.
 
-### 数据来源
+### Field Description
 
-## 文件结构
+* `event_id`
+  Global unique key, used to join with the event detail file for fusion analysis.
+* `llmpredict` (model prediction object)
+  * `entity`: Responsible subject of the risk, values: `Human` / `AI`
+  * `intent`: Behavior intention of the risk event, value: `Intentional`
+  * `time`: Occurrence stage of risk lifecycle, value: `Post-deployment`
+  * `eu_ai_act`: Compliance risk level aligned with EU AI Act, e.g., `High Risk` / `Limited Risk`
+  * `domain_classification`: Two-level category in array format, describes malicious scenarios (e.g., fraud, scams, targeted manipulation).
