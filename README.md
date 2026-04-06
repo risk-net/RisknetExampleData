@@ -1,5 +1,8 @@
 # RiskNet Example Data
 [中文文档](./README_cn.md)
+This project serves as sample data for the full Risk-Net dataset after completing AI risk news identification, incident alignment, and multi-dimensional classification.
+The complete dataset contains **54,386 incidents** and **264,776 incident-level AI risk news articles**.
+To demonstrate project progress, the sample data presents **1,000 incidents** with a total of **56,978 incident-level AI risk news articles**.
 
 ## Multi-dimensional-Classification_results.json
 

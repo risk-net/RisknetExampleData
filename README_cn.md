@@ -1,5 +1,7 @@
-# RiskNet 示例数据
+# Risk-Net 示例数据
 [English](./README.md)
+
+本项目是 Risk-Net经过AI风险新闻识别，事件对齐和多维度分类后全量数据的样例数据。全量数据集一共有54386个事件，264,776条事件级AI风险新闻。为展示项目进展，样例数据中展示1000个事件，共包含56978条事件级AI风险新闻。
 ## Multi-dimensional-Classification_results.json
 
 ### 文件说明
